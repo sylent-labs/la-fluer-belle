@@ -53,5 +53,11 @@ export const shopInfo: ShopInfo = {
       handle: "La Fleur Belle",
       href: "https://facebook.com/lafleurbelle.ph",
     },
+    {
+      platform: "viber",
+      label: "VIBER",
+      handle: "+63 961 328 7317",
+      href: "viber://chat?number=%2B639613287317",
+    },
   ],
 };

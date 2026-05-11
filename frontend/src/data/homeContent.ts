@@ -1,11 +1,12 @@
 export interface HeroContent {
-  eyebrow: string;
-  headline: string;
-  body: string;
+  tagline: string;
+  brand: string;
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
   imageSrc: string;
   imageAlt: string;
+  logoSrc: string;
+  logoAlt: string;
 }
 
 export interface FeatureCardContent {
@@ -44,13 +45,14 @@ export interface OrderStep {
 }
 
 export const hero: HeroContent = {
-  eyebrow: "La Fleur Belle",
-  headline: "Beautiful Flowers for every Occasion",
-  body: "Hand-arranged bouquets from a small home studio in Quezon City. Crafted to order, delivered the same day around Metro Manila.",
+  tagline: "Beautiful Flowers for Every Occasion",
+  brand: "La Fleur Belle",
   primaryCta: { label: "Shop Bouquets", href: "/bouquets" },
   secondaryCta: { label: "Custom Order", href: "/custom" },
-  imageSrc: "/images/hero.svg",
-  imageAlt: "A hand-tied bouquet of pink and ivory roses",
+  imageSrc: "/images/hero.png",
+  imageAlt: "A hand-tied bouquet of sunflowers, gerberas, and carnations",
+  logoSrc: "/images/Logo.svg",
+  logoAlt: "La Fleur Belle medallion",
 };
 
 export const flowersTellStories: BrandSectionContent = {

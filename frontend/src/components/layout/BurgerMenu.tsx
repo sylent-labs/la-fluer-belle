@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
 
 import {
   Sheet,
@@ -38,9 +37,14 @@ export function BurgerMenu() {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         aria-label="Open menu"
-        className="inline-flex h-10 w-10 items-center justify-center rounded-md text-ink ring-offset-cream transition-colors hover:bg-ink/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-md ring-offset-cream transition-colors hover:bg-ink/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
       >
-        <Menu className="h-6 w-6" />
+        <img
+          src="/images/Burger.svg"
+          alt=""
+          aria-hidden="true"
+          className="h-5 w-auto"
+        />
       </SheetTrigger>
       <SheetContent side="right" className="w-3/4 max-w-xs">
         <SheetHeader>

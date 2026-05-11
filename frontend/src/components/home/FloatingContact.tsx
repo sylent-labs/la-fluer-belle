@@ -1,0 +1,65 @@
+import type { CSSProperties } from "react";
+
+import { shopInfo, type SocialPlatform } from "@/data/shopInfo";
+
+const ICON_SRC: Record<SocialPlatform, string> = {
+  instagram: "/images/instagram-svgrepo-com%202.svg",
+  facebook: "/images/facebook-svgrepo-com%202.svg",
+  viber: "/images/viber-svgrepo-com%202.svg",
+  messenger: "/images/facebook-svgrepo-com%202.svg",
+};
+
+const FLOATING_PLATFORMS: readonly SocialPlatform[] = [
+  "instagram",
+  "facebook",
+  "viber",
+];
+
+function maskStyle(src: string): CSSProperties {
+  return {
+    WebkitMaskImage: `url(${src})`,
+    maskImage: `url(${src})`,
+    WebkitMaskRepeat: "no-repeat",
+    maskRepeat: "no-repeat",
+    WebkitMaskPosition: "center",
+    maskPosition: "center",
+    WebkitMaskSize: "contain",
+    maskSize: "contain",
+  };
+}
+
+export function FloatingContact(): JSX.Element | null {
+  const links = FLOATING_PLATFORMS.map((platform) =>
+    shopInfo.socials.find((s) => s.platform === platform),
+  ).filter(
+    (link): link is (typeof shopInfo.socials)[number] => link !== undefined,
+  );
+
+  if (links.length === 0) {
+    return null;
+  }
+
+  return (
+    <nav
+      aria-label="Quick contact"
+      className="pointer-events-none absolute bottom-32 left-3 z-30 flex flex-col gap-4"
+    >
+      {links.map((link) => (
+        <a
+          key={link.platform}
+          href={link.href}
+          aria-label={`${link.label} — ${link.handle}`}
+          target={link.href.startsWith("http") ? "_blank" : undefined}
+          rel={link.href.startsWith("http") ? "noreferrer noopener" : undefined}
+          className="pointer-events-auto inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white/30 backdrop-blur-sm transition-colors hover:bg-white/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#F2C0C8]"
+        >
+          <span
+            aria-hidden="true"
+            className="block h-7 w-7 bg-[#C3858F]"
+            style={maskStyle(ICON_SRC[link.platform])}
+          />
+        </a>
+      ))}
+    </nav>
+  );
+}
