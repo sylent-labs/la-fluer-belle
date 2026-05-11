@@ -49,7 +49,7 @@ export const hero: HeroContent = {
   body: "Hand-arranged bouquets from a small home studio in Quezon City. Crafted to order, delivered the same day around Metro Manila.",
   primaryCta: { label: "Shop Bouquets", href: "/bouquets" },
   secondaryCta: { label: "Custom Order", href: "/custom" },
-  imageSrc: "/images/hero-bouquet.jpg",
+  imageSrc: "/images/hero.svg",
   imageAlt: "A hand-tied bouquet of pink and ivory roses",
 };
 
@@ -97,8 +97,14 @@ export const aboutTeaser: AboutTeaserContent = {
 
 export const photoStrip: { src: string; alt: string }[] = [
   { src: "/images/strip/strip-1.jpg", alt: "Pink roses in soft morning light" },
-  { src: "/images/strip/strip-2.jpg", alt: "Yellow sunflowers wrapped in kraft paper" },
-  { src: "/images/strip/strip-3.jpg", alt: "White tulips arranged on a marble surface" },
+  {
+    src: "/images/strip/strip-2.jpg",
+    alt: "Yellow sunflowers wrapped in kraft paper",
+  },
+  {
+    src: "/images/strip/strip-3.jpg",
+    alt: "White tulips arranged on a marble surface",
+  },
 ];
 
 export const orderSteps: OrderStep[] = [

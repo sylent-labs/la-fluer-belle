@@ -59,6 +59,28 @@ All notable changes to La Fleur Belle are recorded here. The format follows
 - `routes/Home.tsx` no longer renders its own `<main>` wrapper — `Layout`
   owns that now, so the placeholder is a plain `<section>` until the home
   page sections land.
+- `frontend/src/components/SectionDivider.tsx` — reusable centered four-point
+  star/asterisk SVG marked `aria-hidden`. Sized at `h-3 w-3` in `text-rose-deep`
+  with an optional `showLines` prop that adds hairline rules either side for
+  sections that want a fuller eyebrow. Lives in `components/` (not
+  `components/home/`) because Top Picks, Flowers Tell Stories, Tagline, and
+  several other sections reuse it.
+- `frontend/src/components/home/Hero.tsx` — first composed Home section.
+  Mobile-first layout: rose-soft blurred blobs and two small rose-deep dots
+  behind a rounded `2rem` image frame anchored top-right at 92% width with an
+  `aspect-[391/425]` ratio that matches the source SVG so the bouquet doesn't
+  letterbox. Below: `font-display` headline at `text-4xl`/`sm:text-5xl`, body
+  copy at `text-ink/70`, a stacked `Button` pair — primary forest "Shop
+  Bouquets" → `/bouquets` and outline rose-deep "Custom Order" → `/custom`,
+  both `asChild` over a React Router `Link`. Closes with a `SectionDivider`.
+  All copy, alt text, and hrefs come from `hero` in
+  `frontend/src/data/homeContent.ts` — no magic strings in the JSX.
+- `frontend/public/images/hero.svg` — placeholder bouquet artwork wired into
+  the Hero. Lands at the brand frame above. Note: the file is ~20 MB because
+  the underlying raster is base64-embedded inside an SVG wrapper; this needs
+  to be replaced with a real WebP/JPEG before launch, since first paint will
+  block on the full download on LTE.
+- `routes/Home.tsx` now mounts `<Hero />` instead of the scaffold placeholder.
 
 ### Fixed
 
