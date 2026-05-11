@@ -37,6 +37,28 @@ All notable changes to La Fleur Belle are recorded here. The format follows
   area, business reg line, copyright string, plus a `socials` array with
   Instagram and Facebook entries (Viber is one line away; the `SocialPlatform`
   union already includes it).
+- Shared mobile-first layout under `frontend/src/components/layout/`:
+  - `NavBar.tsx` is a sticky cream top bar with the wordmark linking to `/`
+    and a burger trigger on the right.
+  - `BurgerMenu.tsx` uses the shadcn `Sheet` primitive (right side, ~75% width
+    on mobile, capped at `sm:max-w-xs`) and renders the five `Link`s the spec
+    calls for: Home, Bouquets, Custom Order, About, FAQ. The active route is
+    highlighted via `useLocation`, and the sheet closes both on item click
+    (`SheetClose asChild`) and whenever the pathname changes — the latter
+    catches the back/forward case where a click never fires.
+  - `Footer.tsx` is the mauve panel: centered logo medallion, link cluster
+    (About, Bouquets, Custom Order, Delivery Information, FAQ — Delivery and
+    FAQ both point at `/faq` for now since there is no separate `/delivery`
+    route), social rows driven off `shopInfo.socials` plus an email row, and
+    the business reg / copyright lines from `shopInfo`. Social platform →
+    lucide icon mapping lives in a `Record<SocialPlatform, LucideIcon>` so
+    adding Viber later is one line in `shopInfo.ts` + one line in the map.
+  - `Layout.tsx` is a tiny `<NavBar /><main><Outlet /></main><Footer />`
+    wrapper, mounted in `App.tsx` as a layout route so every future page
+    inherits the chrome for free.
+- `routes/Home.tsx` no longer renders its own `<main>` wrapper — `Layout`
+  owns that now, so the placeholder is a plain `<section>` until the home
+  page sections land.
 
 ### Fixed
 
