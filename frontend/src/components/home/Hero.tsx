@@ -40,14 +40,14 @@ export function Hero(): JSX.Element {
 
         <div className="relative -mt-6 w-full">
           <img
-            src="/images/Rectangle%201.svg"
+            src="/images/support_bg/Rectangle%201.svg"
             alt=""
             aria-hidden="true"
             className="absolute left-1/2 top-4 z-0 w-[82%] -translate-x-1/2"
           />
 
           <img
-            src="/images/p2.svg"
+            src="/images/petals/p2.svg"
             alt=""
             aria-hidden="true"
             className="pointer-events-none absolute -left-2 bottom-2 z-10 w-20"
@@ -55,7 +55,7 @@ export function Hero(): JSX.Element {
             decoding="async"
           />
           <img
-            src="/images/p5.svg"
+            src="/images/petals/p5.svg"
             alt=""
             aria-hidden="true"
             className="pointer-events-none absolute -right-2 bottom-6 z-10 w-20"
@@ -79,7 +79,7 @@ export function Hero(): JSX.Element {
             className={`block w-[220px] transition-transform hover:-translate-y-[1px] ${FOCUS_RING}`}
           >
             <img
-              src="/images/Shop%20Button%20(1).svg"
+              src="/images/cta/Shop%20Button.svg"
               alt=""
               aria-hidden="true"
               className="h-auto w-full"
@@ -91,7 +91,7 @@ export function Hero(): JSX.Element {
             className={`block w-[220px] transition-transform hover:-translate-y-[1px] ${FOCUS_RING}`}
           >
             <img
-              src="/images/Custom%20Order%20Button.svg"
+              src="/images/cta/Custom%20Order%20Button.svg"
               alt=""
               aria-hidden="true"
               className="h-auto w-full"
