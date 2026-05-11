@@ -20,6 +20,23 @@ All notable changes to La Fleur Belle are recorded here. The format follows
 - Folder skeleton ready for the next pass: `components/{home,layout,ui}`,
   `data/`, `lib/`, `routes/`, `public/images/`.
 - `CHANGELOG.md` (this file) at the repo root.
+- Seeded typed catalog at `frontend/src/data/bouquets.ts` with five bouquets from
+  the mockups (Crimson Ivory Rose, Sunny Bloom Sunflower, Pink Carnation, Ivory
+  Blush Tulip, Lavender Dream). Exports a `Bouquet` interface matching the
+  shape in `.claude/rules/10-project-context.md`, a `topPickSlugs` curation
+  list for the Home page carousel, and a `getBouquetBySlug()` helper for the
+  future `/bouquets/:slug` route. Image paths point at
+  `/images/bouquets/<slug>.jpg` — placeholders until real photography lands.
+- `frontend/src/data/homeContent.ts` holds typed copy for every Home section
+  (hero, "Where Flowers Tell Stories", feature cards, tagline divider, about
+  teaser, photo strip, and the four "How to Order" steps). The `OrderStep`
+  type uses the exact `"browse" | "inquiry" | "payment" | "receive"` icon
+  union from the plan so the section component can do an exhaustive `switch`.
+- `frontend/src/data/shopInfo.ts` carries shop metadata for the footer and any
+  future "contact us" surfaces — name, tagline, email, phone, address, service
+  area, business reg line, copyright string, plus a `socials` array with
+  Instagram and Facebook entries (Viber is one line away; the `SocialPlatform`
+  union already includes it).
 
 ### Fixed
 
