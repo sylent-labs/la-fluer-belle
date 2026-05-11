@@ -1,0 +1,44 @@
+# Secrets
+.env
+.env.*
+!.env.example
+# Frontend Vite vars are baked into the public JS bundle, so committing
+# frontend/.env.production is safe (and necessary for Vercel auto-build).
+!frontend/.env.production
+*.pem
+*credentials*
+*secret*
+
+# AI agent local artefacts
+.claude/completed-tasks/*
+!.claude/completed-tasks/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node / Vite
+node_modules/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+.claude/
+CLAUDE.md
