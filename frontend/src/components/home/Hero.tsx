@@ -35,7 +35,7 @@ export function Hero(): JSX.Element {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-screen-sm flex-col items-center px-[21px] pb-8 pt-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-screen-sm flex-col items-center px-[21px] pb-8 pt-[72px]">
         <img
           src={hero.logoSrc}
           alt={hero.logoAlt}
@@ -48,19 +48,19 @@ export function Hero(): JSX.Element {
 
         <h1
           id="hero-heading"
-          className="relative z-30 mt-3 text-center font-display text-[44px] font-medium leading-[0.95] tracking-tight text-white drop-shadow-sm sm:text-[56px]"
+          className="relative z-30 mt-2 text-center font-display text-[44px] font-medium leading-[0.95] tracking-tight text-white drop-shadow-sm sm:text-[56px]"
         >
           {hero.brand}
         </h1>
         <span
           aria-hidden="true"
-          className="relative z-10 -mt-2 select-none text-center font-display text-[44px] font-medium leading-[0.95] tracking-tight text-transparent sm:text-[56px]"
+          className="relative z-10 -mt-1 select-none text-center font-display text-[44px] font-medium leading-[0.95] tracking-tight text-transparent sm:text-[56px]"
           style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.55)" }}
         >
           {hero.brand}
         </span>
 
-        <div className="relative -mt-6 w-full">
+        <div className="relative -mt-20 w-full sm:-mt-24">
           <img
             src={hero.imageSrc}
             alt={hero.imageAlt}
@@ -72,7 +72,7 @@ export function Hero(): JSX.Element {
           />
         </div>
 
-        <div className="relative z-30 -mt-24 flex flex-col items-center gap-4">
+        <div className="relative z-30 -mt-20 flex flex-col items-center gap-4 sm:-mt-24">
           <Link
             to={hero.primaryCta.href}
             aria-label={hero.primaryCta.label}
