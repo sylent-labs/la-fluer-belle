@@ -17,9 +17,15 @@ export function Hero(): JSX.Element {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0"
       >
+        <img
+          src="/images/support_bg/Ellipse%201.svg"
+          alt=""
+          className="absolute left-1/2 -translate-x-1/2"
+          style={{ top: 254, width: 412, height: 467 }}
+        />
         <div
-          className="absolute left-1/2 -translate-x-1/2 rounded-t-full bg-white"
-          style={{ top: 340, bottom: 0, width: 467 }}
+          className="absolute inset-x-0 bg-white"
+          style={{ top: 488, bottom: 0 }}
         />
         <img
           src="/images/support_bg/Rectangle%201.svg"
@@ -35,7 +41,7 @@ export function Hero(): JSX.Element {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-screen-sm flex-col items-center px-[21px] pb-8 pt-[72px]">
+      <div className="relative z-10 mx-auto flex w-full max-w-screen-sm flex-col items-center px-[21px] pb-[159px] pt-[72px]">
         <img
           src={hero.logoSrc}
           alt={hero.logoAlt}
