@@ -13,7 +13,29 @@ export function Hero(): JSX.Element {
       aria-labelledby="hero-heading"
       className="relative -mt-14 overflow-hidden bg-[#F2C0C8]"
     >
-      <div className="relative mx-auto flex max-w-screen-sm flex-col items-center px-4 pb-10 pt-20">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0"
+      >
+        <div
+          className="absolute left-1/2 -translate-x-1/2 rounded-t-full bg-white"
+          style={{ top: 340, bottom: 0, width: 467 }}
+        />
+        <img
+          src="/images/support_bg/Rectangle%201.svg"
+          alt=""
+          className="absolute left-1/2 -translate-x-1/2"
+          style={{ top: 53, width: 224, height: 324 }}
+        />
+        <img
+          src="/images/support_bg/Rectangle%202.svg"
+          alt=""
+          className="absolute left-1/2 -translate-x-1/2"
+          style={{ top: 59, width: 212, height: 235 }}
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto flex w-full max-w-screen-sm flex-col items-center px-4 pb-8 pt-20">
         <img
           src={hero.logoSrc}
           alt={hero.logoAlt}
@@ -40,39 +62,15 @@ export function Hero(): JSX.Element {
 
         <div className="relative -mt-6 w-full">
           <img
-            src="/images/support_bg/Rectangle%201.svg"
-            alt=""
-            aria-hidden="true"
-            className="absolute left-1/2 top-4 z-0 w-[82%] -translate-x-1/2"
-          />
-
-          <img
-            src="/images/petals/p2.svg"
-            alt=""
-            aria-hidden="true"
-            className="pointer-events-none absolute -left-2 bottom-2 z-10 w-20"
-            loading="lazy"
-            decoding="async"
-          />
-          <img
-            src="/images/petals/p5.svg"
-            alt=""
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-2 bottom-6 z-10 w-20"
-            loading="lazy"
-            decoding="async"
-          />
-
-          <img
             src={hero.imageSrc}
             alt={hero.imageAlt}
-            className="relative z-20 mx-auto block w-[96%] max-w-[420px] object-contain drop-shadow-lg"
+            className="relative z-20 mx-auto block w-full max-w-[300px] object-contain drop-shadow-lg"
             loading="eager"
             decoding="async"
           />
         </div>
 
-        <div className="relative z-30 mt-2 flex flex-col items-center gap-3">
+        <div className="relative z-30 mt-6 flex flex-col items-center gap-3">
           <Link
             to={hero.primaryCta.href}
             aria-label={hero.primaryCta.label}
