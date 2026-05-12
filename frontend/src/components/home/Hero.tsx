@@ -35,7 +35,7 @@ export function Hero(): JSX.Element {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-screen-sm flex-col items-center px-4 pb-8 pt-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-screen-sm flex-col items-center px-[21px] pb-8 pt-20">
         <img
           src={hero.logoSrc}
           alt={hero.logoAlt}
@@ -64,7 +64,9 @@ export function Hero(): JSX.Element {
           <img
             src={hero.imageSrc}
             alt={hero.imageAlt}
-            className="relative z-20 mx-auto block w-full max-w-[300px] object-contain drop-shadow-lg"
+            width={395}
+            height={425}
+            className="relative z-20 mx-auto block aspect-[395/425] w-full max-w-[395px] object-contain drop-shadow-lg"
             loading="eager"
             decoding="async"
           />
