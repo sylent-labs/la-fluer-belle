@@ -21,7 +21,7 @@ export function Hero(): JSX.Element {
           src="/images/support_bg/Ellipse%201.svg"
           alt=""
           className="absolute left-1/2 -translate-x-1/2"
-          style={{ top: 254, width: 412, height: 467 }}
+          style={{ top: 274, width: 412, height: 467 }}
         />
         <div
           className="absolute inset-x-0 bg-white"
@@ -54,7 +54,7 @@ export function Hero(): JSX.Element {
 
         <h1
           id="hero-heading"
-          className="relative z-30 -mt-[8px] text-center font-display text-[48px] font-extrabold text-white"
+          className="relative z-30 -mt-[8px] text-center font-display text-[44px] font-extrabold text-white"
           style={{
             lineHeight: "0.9",
             letterSpacing: "-0.02em",
@@ -65,7 +65,7 @@ export function Hero(): JSX.Element {
         </h1>
         <span
           aria-hidden="true"
-          className="relative z-10 -mt-1 select-none text-center font-display text-[48px] font-extrabold text-transparent"
+          className="relative z-10 -mt-1 select-none text-center font-display text-[44px] font-extrabold text-transparent"
           style={{
             lineHeight: "0.9",
             letterSpacing: "-0.02em",
