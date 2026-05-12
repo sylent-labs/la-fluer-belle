@@ -43,7 +43,7 @@ export function FloatingContact(): JSX.Element | null {
     <nav
       aria-label="Quick contact"
       className="pointer-events-none absolute z-30 flex flex-col gap-[9px]"
-      style={{ bottom: 159, left: 21, width: 51 }}
+      style={{ bottom: 96, left: 21, width: 51 }}
     >
       {links.map((link) => (
         <a
