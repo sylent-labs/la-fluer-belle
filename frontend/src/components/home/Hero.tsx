@@ -72,29 +72,33 @@ export function Hero(): JSX.Element {
           />
         </div>
 
-        <div className="relative z-30 mt-6 flex flex-col items-center gap-3">
+        <div className="relative z-30 -mt-24 flex flex-col items-center gap-4">
           <Link
             to={hero.primaryCta.href}
             aria-label={hero.primaryCta.label}
-            className={`block w-[220px] transition-transform hover:-translate-y-[1px] ${FOCUS_RING}`}
+            className={`block w-[200px] transition-transform hover:-translate-y-[1px] ${FOCUS_RING}`}
           >
             <img
               src="/images/cta/Shop%20Button.svg"
               alt=""
               aria-hidden="true"
-              className="h-auto w-full"
+              width={200}
+              height={44}
+              className="block h-auto w-full"
             />
           </Link>
           <Link
             to={hero.secondaryCta.href}
             aria-label={hero.secondaryCta.label}
-            className={`block w-[220px] transition-transform hover:-translate-y-[1px] ${FOCUS_RING}`}
+            className={`block w-[200px] transition-transform hover:-translate-y-[1px] ${FOCUS_RING}`}
           >
             <img
               src="/images/cta/Custom%20Order%20Button.svg"
               alt=""
               aria-hidden="true"
-              className="h-auto w-full"
+              width={200}
+              height={47}
+              className="block h-auto w-full"
             />
           </Link>
         </div>
