@@ -56,7 +56,7 @@ export function Hero(): JSX.Element {
           id="hero-heading"
           className="relative z-30 -mt-[8px] text-center font-display text-[44px] font-extrabold text-white"
           style={{
-            lineHeight: "0.9",
+            lineHeight: "0.7",
             letterSpacing: "-0.02em",
             textShadow: "0px 4px 12.3px rgba(255, 71, 71, 0.13)",
           }}
@@ -65,9 +65,9 @@ export function Hero(): JSX.Element {
         </h1>
         <span
           aria-hidden="true"
-          className="relative z-10 -mt-1 select-none text-center font-display text-[44px] font-extrabold text-transparent"
+          className="relative z-10 mt-1 select-none text-center font-display text-[44px] font-extrabold text-transparent"
           style={{
-            lineHeight: "0.9",
+            lineHeight: "0.7",
             letterSpacing: "-0.02em",
             WebkitTextStroke: "1.5px rgba(255,255,255,0.55)",
           }}
